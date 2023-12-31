@@ -21,4 +21,4 @@ Indices and tables
 
 .. note::
 
-   This project is under active development.
+   This project is under active development and will display a personal project.
