@@ -35,19 +35,19 @@ u, pr, pu, upi = fe.perform_feature_engineering()
 
 print('')
 
-# manager = FeatureStoreManager(hopsworks_api_key_value)
-#
-# users_fg = manager.fs.get_or_create_feature_group(
-#     name="users",
-#     version=1,
-#     description="Users data",
-#     primary_key=["id"]
-# )
-#
-# users_fg.insert(
-#     users,
-#     write_options={"wait_for_job": True},
-# )
+manager = FeatureStoreManager(hopsworks_api_key_value)
+
+users_fg = manager.fs.get_or_create_feature_group(
+    name="users",
+    version=1,
+    description="users data",
+    primary_key=["id"]
+)
+
+users_fg.insert(
+    u,
+    write_options={"wait_for_job": True},
+)
 #
 # feature_descriptions = [
 #     {"name": "id", "description": "user id"},
