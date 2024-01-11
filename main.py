@@ -22,9 +22,9 @@ products = connector.fetch_data_into_pandas(PRODUCTS)
 purchases = connector.fetch_data_into_pandas(PURCHASES)
 
 # Select only the desired columns and create a new DataFrame
-users_selected_columns = ['id', 'age', 'name', 'email', 'title', 'gender', 'height', 'weight', 'address', 'language', 'telephone', 'blood_type', 'occupation', 'nationality']
-products_selected_columns = ['id', 'make', 'year', 'model', 'price']
-purchases_selected_columns = ['id', 'user_id', 'product_id', 'returned_at', 'purchased_at', 'added_to_cart_at']
+users_selected_columns = ['id', 'age', 'name', 'email', 'title', 'gender', 'height', 'weight', 'address', 'language', 'telephone', 'blood_type', 'created_at', 'occupation', 'updated_at', 'nationality', 'academic_degree']
+products_selected_columns = ['id', 'make', 'year', 'model', 'price', 'created_at', 'updated_at']
+purchases_selected_columns = ['id', 'user_id', 'created_at', 'product_id', 'updated_at', 'returned_at', 'purchased_at', 'added_to_cart_at']
 
 users = users[users_selected_columns]
 products = products[products_selected_columns]
